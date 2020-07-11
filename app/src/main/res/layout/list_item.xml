@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/border_recycler">
+
+    <ImageView
+        android:id="@+id/subwayButtonImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/icon_subway"/>
+
+    <TextView
+        android:id="@+id/subwayStationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:text="정부청사역"
+        android:textSize="16dp"/>
+
+</LinearLayout>
