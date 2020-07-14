@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class SubwayStation {
 
+    public static final int TOTAL_STATION_COUNT = 22;
+
     public static final String[] daejeonStations = {
             "반석",
             "지족",

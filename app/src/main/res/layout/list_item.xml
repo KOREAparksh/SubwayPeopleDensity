@@ -2,10 +2,10 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/border_recycler">
+    android:orientation="horizontal">
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/subwayButtonImage"
         android:layout_width="30dp"
         android:layout_height="30dp"
