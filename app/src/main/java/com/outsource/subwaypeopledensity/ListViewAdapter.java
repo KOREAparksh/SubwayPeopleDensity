@@ -22,7 +22,7 @@ class ListViewAdapter extends BaseAdapter {
 
     private Context context;
     private List<String> stationLists = new ArrayList<>(); //지하철역 리스트
-    int p[]={-1,-1,-1,-1,-1};
+    int p[]={-1,-1,-1,-1,-1}; //지하철 위치
     List<Subway> subways = new ArrayList<>();
 
 
@@ -35,15 +35,16 @@ class ListViewAdapter extends BaseAdapter {
 
         setRandomNumber();
         setSubwayData();
-
     }
 
-    public void setGotoNextStation(){
-        for(int i=0; i<5; i++){
+    //다음역으로 이동시켜주는 함수
+    public void setGotoNextStation() {
+        for (int i = 0; i < 5; i++) {
             p[i]++;
         }
     }
 
+    //다음역 이동 시 지하철 내 현재인원 변경하는 함수
     public void modifySubwayDataForNextStation(){
         Random rnd = new Random();
         for(int i=0; i<5; i++){
@@ -57,6 +58,7 @@ class ListViewAdapter extends BaseAdapter {
     }
 
 
+    //처음 지하철 내 현재인원 초기화하는 함수
     public void setSubwayData() {
         Random rnd = new Random();
         for(int i=0; i<5; i++){
@@ -66,6 +68,7 @@ class ListViewAdapter extends BaseAdapter {
         }
     }
 
+    //처음 지하철 위치 랜덤으로 지정하는 함수
     public void setRandomNumber() {
         Random rnd = new Random();
 
@@ -140,7 +143,7 @@ class ListViewAdapter extends BaseAdapter {
         subwayImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.position = finalNum;
+                MainActivity.position = finalNum; // 메인함수에 -1인거 바꿔줌
                 if(finalNum != -1)
                     MainActivity.viewSubwayViewer(subways.get(finalNum), finalNum);
             }
